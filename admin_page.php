@@ -14,7 +14,6 @@
   <div id="formContent">
     <!-- Tabs Titles -->
     <h2 class="active"> Sign In </h2>
-    <h2 class="inactive underlineHover"><a href="signup.php">Sign Up </a></h2>
     <h2 class="inactive underlineHover"><a href="https://royalsociety.org"" target="blank">About </a></h2>
     <h2 class="inactive underlineHover"><a href="oursocialnetwork.html">Social </a></h2>
 
@@ -22,19 +21,26 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="images/specbee.png" id="icon" alt="User Icon" />
+      <h3>WELCOME ADMIN</h3>
+      <p>LIST OF ISSUES</p>
     </div>
 
     <!-- Login Form -->
-    <form action="dashboard.php" method="POST">
-      <input type="text" name="email" id="login" class="fadeIn second"  placeholder="Email">
-      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-      <input type="submit" class="fadeIn fourth" name="login" value="Log In">
+    <form action="admin_dashboard.php" method="POST">
+ <div>
+     Subject:
+<input type="text" value="jhddjshdbn dhsbdhs dh d hsbhbsh ddhd h dh " name="admin_subject">
+<br>Issue:
+<textarea  id="textarea" class="fadeIn third form-control" height="150px;" required="required" name="issue" value="gshubsbh cdhubdhfbnr cfhfrbbbfhjf hcu hj fh chj rhbcur ruc r h rbfiuvbrib vih rhi vcir uvbriur" ></textarea> 
+<br><br>
+<button>EDIT</button>  <button>DELETE</button>
+ </div>
+
     </form>
 
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="forgetpassword.html">Forgot Password?</a>
+<div>
+<input type="button" href="logout.php" value="Logout">
 </div>
+    <!-- Remind Passowrd -->
 </body>
 </html>

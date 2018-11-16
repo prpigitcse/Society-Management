@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>specbee</title>
+    <title>Society Management</title>
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
@@ -13,31 +13,36 @@
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
-    <h2 class="active"> submit isuue  </h2>
-    <h2 class="inactive underlineHover"> <a href="search issue.php"> check your issue </a></h2>
+     <!-- <h2 class="inactive underlineHover"><a href="dashboard.php"> submit isuue  </a></h2> -->
+     <h2 class="active">  check your issue </a></h2>
 
 
     <!-- Icon -->
+    <div class="fadeIn first">
+      <h3>ADMIN DASHBOARD</h3>
+    </div>
 
 
     <!-- Login Form -->
-    <form method="POST" action="form.php">
-    <select id="position" class="fadeIn first"  name="position" placeholder="Position" >
+    <form method="POST" action="admin_page.php">
+    <select id="position" class="fadeIn first"  name="search_issue" placeholder="search issue" >
             <option>ELECTRICITY</option>
             <option>LAND</option>
             <option>WATER</option>
             <option>TRANSPORT</option>
             <option>WORK</option>      
      </select>
-    <input type="text" id="subject" class="fadeIn second"  required="required" name="subject" placeholder="subject">
-      <textarea  id="textarea" class="fadeIn third form-control" height="150px;" required="required" name="issue" placeholder="type your issue">
-</textarea>
-      <input type="submit" class="fadeIn fourth" value="submit" name="submit">
+     <select id=" position" class="fadeIn first"  name="status" placeholder="status" >
+            <option >OPEN</option>
+            <option >CLOSE</option>
+  
+     </select>
+      <input type="submit" class="fadeIn fourth" value="check" name="check">
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
- <b> Society Management services </b>
+ <b> specbee consulting services </b>
     </div>
 
   </div>

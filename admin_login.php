@@ -14,7 +14,6 @@
   <div id="formContent">
     <!-- Tabs Titles -->
     <h2 class="active"> Sign In </h2>
-    <h2 class="inactive underlineHover"><a href="signup.php">Sign Up </a></h2>
     <h2 class="inactive underlineHover"><a href="https://royalsociety.org"" target="blank">About </a></h2>
     <h2 class="inactive underlineHover"><a href="oursocialnetwork.html">Social </a></h2>
 
@@ -23,10 +22,11 @@
     <!-- Icon -->
     <div class="fadeIn first">
       <img src="images/specbee.png" id="icon" alt="User Icon" />
+      <h3>WELCOME ADMIN</h3>
     </div>
 
     <!-- Login Form -->
-    <form action="dashboard.php" method="POST">
+    <form action="admin_dashboard.php" method="POST">
       <input type="text" name="email" id="login" class="fadeIn second"  placeholder="Email">
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
       <input type="submit" class="fadeIn fourth" name="login" value="Log In">
