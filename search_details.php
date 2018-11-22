@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>specbee</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> submit isuue  </h2>
+    <h2 class="inactive underlineHover"> <a href="search issue.php"> check your issue </a></h2>
+    <h2 class="inactive underlineHover"> <a href="pass_system.php"> Pass System </a></h2>
+
+
+    <!-- Icon -->
+
+
+    <!-- Login Form -->
+    <form method="POST" action="search issue.php">
+    <select id="position" class="fadeIn first"  name="position" placeholder="Position" >
+            <option>ELECTRICITY</option>
+            <option>WATER</option>
+            <option>PARKING</option>
+            <option>CLEANLINESS</option>
+            <option>SECURITY</option>      
+     </select>
+    <input type="text" id="subject" class="fadeIn second"  required="required" name="subject" placeholder="subject">
+      <textarea  id="textarea" class="fadeIn third form-control" height="150px;" required="required" name="issue" placeholder="type your issue">
+</textarea>
+      <input type="submit" class="fadeIn fourth" value="submit" name="submit">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+ <b> Society Management services </b>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
+
+
