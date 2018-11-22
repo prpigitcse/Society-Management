@@ -1,11 +1,15 @@
 <?php
-include('database.php');
+require('db.php');
 $obj=new Database();
 $conn=$obj->getConnection();
-if(isset($_POST['id'])){
+
+if(isset($_POST['id']))
+{
     $id=$_POST['id'];
-    $res = mysqli_query($conn,"UPDATE User set status='1' where email='$id' ");
-   
+    $sql = "UPDATE user_request set status='1' where email='$id' ";
+    echo $sql;
+    $res = mysqli_query($conn,$sql);
+    echo $res['status'];
 }
 
 ?>
