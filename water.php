@@ -1,7 +1,7 @@
 <?php
 include("database.php");
 
-$all=$show->all_issues($conn,'ELECTRICITY');
+$all=$show->all_issues($conn,'WATER');
 
 
 ?>

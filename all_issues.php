@@ -1,8 +1,11 @@
 <?php
 include("database.php");
+$category = null;
+if ( !empty($_GET['category'])) {
+    $category = $_GET['category'];
+}
 
-$all=$show->all_issues($conn,'ELECTRICITY');
-
+$all=$show->all_issues($conn,$category);
 
 ?>
 
@@ -61,5 +64,3 @@ $all=$show->all_issues($conn,'ELECTRICITY');
 </div>
 </body>
 </html>
-
-

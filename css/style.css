@@ -1,3 +1,12 @@
 th{
     text-align: center;
 }
+
+/* #card-shadow{
+  box-shadow:0px 0px 5px 4px;
+  padding:  10px;
+} */
+
+td{
+  text-align: center;
+}

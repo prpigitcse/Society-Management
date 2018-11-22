@@ -4,7 +4,7 @@ class Connect {
     private $server = "localhost";
     private $user = "root";
     private  $password = "root";
-    private  $dbname="form";
+    private  $dbname="issue";
     private  $dbc;
     
     
@@ -15,14 +15,48 @@ class Connect {
     }
 
 }
-trait display{
-    public function reterive($abc){
-      $check = mysqli_query($abc, "SELECT * FROM issue  limit 2");
-      return $check;
+// trait display{
+//     public function retrieve($abc,$table){
+//       $query = "SELECT * FROM issue where category='$table' limit 1";
+//       $check = mysqli_query($abc,$query );
+//       return $check;
+//     }
+//     public function info($abc,$id){
+//         $query = "SELECT * FROM issue where issueid='$id'";
+//         $check = mysqli_query($abc,$query);
+//         return $check;
+//     }
+  
+// }
+
+class show {
+    // use display;
+    public function retrieve($abc,$table){
+        $query = "SELECT * FROM problem where category='$table' limit 2";
+        $check = mysqli_query($abc,$query );
+        return $check;
+      }
+
+      public function all_issues($abc,$table){
+        $query = "SELECT * FROM problem where category='$table'";
+        $check = mysqli_query($abc,$query );
+        return $check;
+      }
+
+      public function info($abc,$id){
+        $query = "SELECT * FROM problem where issue_id='$id'";
+        $check = mysqli_query($abc,$query);
+        return $check;
     }
 }
 
-class show {
-    use display;
-}
+$obj = new Connect();
+$conn = $obj->getconnection();
+$show = new show();
+$check = $show->retrieve($conn,'ELECTRICITY');
+$result = $show->retrieve($conn,'WATER');
+$result_parking= $show->retrieve($conn,'PARKING');
+$result_security= $show->retrieve($conn,'SECURITY');
+$result_clean= $show->retrieve($conn,'CLEANLINESS');
+
 ?>
