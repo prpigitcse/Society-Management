@@ -23,7 +23,6 @@ $guest_data= array(
 $table_guest='guest';
 $guest->dbRowInsert($table_guest,$guest_data);
 
-
 $mobile=$guest_mobile;
 $message="Your Unique Id for Society Management is:$guest_pass";
 // $guest->send_msg($mobile,$message);
@@ -31,6 +30,7 @@ $message="Your Unique Id for Society Management is:$guest_pass";
 
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +43,6 @@ $message="Your Unique Id for Society Management is:$guest_pass";
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <title>SOCIETY_MANAGEMENT</title>
 </head>
 <body id="bgcolor">
@@ -68,12 +67,11 @@ $message="Your Unique Id for Society Management is:$guest_pass";
        </div>
         <input type="submit" class="fadeIn seventh" name="pass" value="Submit">
         </form>
-</div> 
+       </div> 
         </div>
     </div>
 
             
-
   <script>
      $(document).ready(function() {
        $('#create_key').click(function(e) {

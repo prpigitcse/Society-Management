@@ -19,6 +19,7 @@ public function connector() {
    //   else{
    //      echo "connected successfully";
    //   }
+
   return $this->dbCon;
 }
 
