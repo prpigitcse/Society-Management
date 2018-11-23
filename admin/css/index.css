@@ -12,11 +12,16 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  height: 100;
 }
 
+th{
+  text-align: center;
+}
+
+
 a {
-  color: #92badd;
+  color: #0F10F3;
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
@@ -37,6 +42,11 @@ h2 {
 /* STRUCTURE */
 
 .wrapper {
+
+
+
+
+
   display: flex;
   align-items: center;
   flex-direction: column; 
