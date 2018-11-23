@@ -1,8 +1,5 @@
 <?php
-require('db.php');
-
-$var = new Database;
-$conn = $var->getConnection();
+require('dbclass.php');
 
 $flag = 0;
 $result = mysqli_query($conn,"SELECT * FROM user_request");
@@ -26,14 +23,15 @@ $result = mysqli_query($conn,"SELECT * FROM user_request");
 $(document).ready(function() { 
    $(".approve").click(function() { 
     var id=$(this).data('id');
-    alert(id);
+  
      $.ajax({   
        type: "POST", 
        url: "status.php",   
        data:   {
           id:id,
        },      
-       success: function(response){                    
+       success: function(response){
+             
             $status = response;
             if($status){ // if true (1)
       setTimeout(function(){// wait for 5 secs(2)
@@ -48,7 +46,6 @@ $(document).ready(function() {
  $(".delete").click(function() { 
 
      var id=$(this).data('id');
-    alert(id);
        $.ajax({   
          type: "POST", 
      url: "delete.php",   
@@ -77,7 +74,7 @@ $(document).ready(function() {
     <!-- Tabs Titles -->
      <h2 class="inactive underlineHover"><a href="admin_dashboard.php">   check your issue </a></h2>
      <h2 class="active"> Pending request </a></h2>
-     <h2 class="inactive underlineHover"><a href="pass_request.php"> Pass request </a></h2>
+     
 
 
     <!-- Icon -->
@@ -92,6 +89,7 @@ $(document).ready(function() {
     <?php 
 
          while($row = mysqli_fetch_array($result)) {
+            echo "<hr>";
              $name = $row['name'];
              $email = $row['email'];
              $adhar = $row['adhar'];
@@ -99,23 +97,24 @@ $(document).ready(function() {
              $status = $row['status'];
 
         if($status == "0")
-        {  
-             echo $name."<br>";
-             echo $email."<br>";
-             echo $adhar."<br>";
-             echo $contact."<br>";
+        { 
+            echo "<div class='text-left'>";
+             echo "<h3>Name:$name<h3>";
+             echo "<h4>Email:$email<h4>";
+             echo "<h4>Adhar No.:$adhar<h4>";
+             echo "<h4>Mobile :$contact <h4>";
+            
              
         ?>
 
             <button type="button" class="approve" name="approve" id="approve" data-id="<?php echo $email; ?>">Approve</button>
-            <button type="button" class="delete" name="delete" id="delete" data-id="<?php echo $email; ?>">Delete</button>
+            <button type="button" class="delete" name="delete" id="delete" data-id="<?php echo $email; ?>">Delete<br></button>
 
             <?php   
-        }
-        
+               echo "</div>" ;
+               echo "<hr>";
+        }   
         ?>
-
-
 <?php
 }
         ?>
