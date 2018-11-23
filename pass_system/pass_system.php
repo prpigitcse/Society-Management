@@ -1,5 +1,4 @@
 <?php
-require 'dbconnection.php';
 require 'guest.php';
 
 if(isset($_POST['pass'])){
@@ -23,14 +22,15 @@ $guest_data= array(
 $table_guest='guest';
 $guest->dbRowInsert($table_guest,$guest_data);
 
+
 $mobile=$guest_mobile;
 $message="Your Unique Id for Society Management is:$guest_pass";
-// $guest->send_msg($mobile,$message);
+ $guest->send_msg($mobile,$message);
+
 }
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,25 +41,31 @@ $message="Your Unique Id for Society Management is:$guest_pass";
     <link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styleaks.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>SOCIETY_MANAGEMENT</title>
 </head>
-<body id="bgcolor">
+<body style="background-image: url('images/background.jpeg');
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;">
 
    <div class="wrapper fadeInDown">
-       <div id="formContent">
 
-    <div class="container">
-        <div class="col-xs-offset-3 col-xs-6 guest">
+       <div id="formContent" style="height:550px;">
+
+  	   <div class="fadeIn first">
+  
         <form action="" method="POST">
         <h3 id="pass_system_title">Guest User Pass System</h3>
         <h4 id="pass_created"></h4>
-        <input type="text" class="form-control fadeIn first" id="guest_name" name="guest_name"required=required placeholder="name"> <br>   
-      <input type="email" name="email" id="guest_email" class="form-control fadeIn second"  placeholder="Email"><br>
-      <input type="number" id="guest_room" class="form-control fadeIn third" name="guest_room" placeholder="Room No"><br>
-       <input type="mobile" id="guest_mobile" class="form-control fadeIn fourth" name="guest_mobile"  placeholder="Mobile No" required=required><br>
-      <input type="date" id="booked_day" class="form-control fadeIn fifth" name="booked_day" placeholder="Booked Date: " onchange="this.className=(this.value!=''?'has-value':'')"><br>
+        <input type="text" class="fadeIn first" id="guest_name" name="guest_name"required=required placeholder="name"> <br>   
+      <input type="email" name="email" id="guest_email" class="fadeIn second"  placeholder="Email"><br>
+      <input type="number" id="guest_room" class="fadeIn third" name="guest_room" placeholder="Room No"><br>
+       <input type="mobile" id="guest_mobile" class="fadeIn fourth" name="guest_mobile"  placeholder="Mobile No" required=required><br>
+      <input type="date" id="booked_day" class="fadeIn fifth" name="booked_day" placeholder="Booked Date: " onchange="this.className=(this.value!=''?'has-value':'')"><br>
        <input type="hidden" id="password_hash" name="password_hash" required=required>
        <div class="form-controls"> 
        <span class="fadeIn sixth" id="create_text">click here to generate pass id</span> 
@@ -67,11 +73,14 @@ $message="Your Unique Id for Society Management is:$guest_pass";
        </div>
         <input type="submit" class="fadeIn seventh" name="pass" value="Submit">
         </form>
-       </div> 
-        </div>
+
+
+
+       </div>
     </div>
 
             
+
   <script>
      $(document).ready(function() {
        $('#create_key').click(function(e) {

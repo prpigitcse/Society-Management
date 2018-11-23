@@ -1,5 +1,4 @@
 <?php
-require 'dbconnection.php';
 require 'guest.php';
 
 if(isset($_POST['pass_verify'])){
@@ -20,14 +19,14 @@ if(isset($_POST['pass_verify'])){
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
-   <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+   <link rel="stylesheet" type="text/css" media="screen" href="css/styleaks.css" />
    
           
    <script src="main.js"></script>
 </head>
 <body id="bgcolor">
 <div class="wrapper fadeInDown">
-   <div class="col-xs-0ffset-3 col-xs-9">
+   <!-- <div class=" col-xs-9"> -->
  <div id="formContent" style="padding-left:50px;padding-right:50px;text-align:left;"><br>
  <pre>
  <h4 id="guest_details">            Guest User Details               </h4>
@@ -39,11 +38,11 @@ if(isset($_POST['pass_verify'])){
 </pre>
 
    <div id="formFooter">
-   <b>specbee consulting services</b>
+   <b>Royal Society services</b>
    </div>
 
  </div>
 </div>
-</div>
+<!-- </div> -->
 </body>
 </html>
