@@ -1,0 +1,129 @@
+
+#bgcolor{
+    background-color: #59A9EF;
+}
+
+.fadeIn.fifth {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+  }
+  .fadeIn.sixth {
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+  }
+  .fadeIn.seventh {
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+  }
+
+#pass_system_title{
+    color: deepskyblue;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+input[type="date"]:not(.has-value):before{
+  color: #555;
+  content: attr(placeholder);
+}
+
+
+#pass_created{
+  color:green;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+#create_key{
+  margin-bottom: 10px;
+  display:inline-block;
+}
+#create_text{
+  color:red;
+}
+
+
+
+#verify_form{
+  padding-bottom: 20px;
+}
+
+#guest_details{
+  font-size: 25px;
+  color: #255a9c;
+  font-weight: 600;
+  font-style: italic;
+}
+
+
+input[type=email] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  input[type=email]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  input[type=email]:placeholder {
+    color: #cccccc;
+  }
+
+
+input[type=mobile] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  input[type=mobile]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  input[type=mobile]:placeholder {
+    color: #cccccc;
+  }
+
+
+/* #guest_details_style{
+
+  style="padding-left:50px;padding-right:50px;text-align:left;"
+} */
