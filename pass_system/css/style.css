@@ -1,0 +1,14 @@
+th{
+    text-align: center;
+}
+html {
+  background-image: url('../images/background.jpeg');
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+/* #card-shadow{
+  box-shadow:0px 0px 5px 4px;
+  padding:  10px;
+} */

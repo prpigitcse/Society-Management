@@ -40,6 +40,7 @@ class guest{
 
     }
 
+
     // function to verify the Guest
 
     function guest_verify($pass_id){
@@ -47,14 +48,7 @@ class guest{
     global $conn;
     $sql=mysqli_query($conn,"select * from guest where guest_pass='$pass_id'");
     return $sql;
-    // $guest_details=$sql->fetch_assoc();
-    // $guest_name=$guest_details['guest_name'];
-    // $guest_email=$guest_details['guest_email'];
-    // $guest_room=$guest_details['guest_room'];
-    // $guest_mobile=$guest_details['guest_mobile'];
-    // $booked_day=$guest_details['booked_day'];
-
-    echo $guest_name."<br>".$guest_email."<br>".$guest_room."<br>".$guest_mobile."<br>".$booked_day;
+ 
 
     }
 
