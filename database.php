@@ -5,19 +5,28 @@ class Connect {
     private $user = "root";
     private  $password = "root";
     private  $dbname="issue";
-    private  $dbc;
+    private static $dbc;
     
     
-   public function getconnection()  {
+    public function __construct()  {
        $this->dbc = new mysqli($this->server,$this->user,$this->password,$this->dbname);
-       return $this->dbc;
-        
+       if (($this->dbc)->connect_error) {
+        die("Connection failed: " . ($this->dbc)->connect_error);
+     }
+
+     else{
+        // echo "connected successfully";
+     }
+
+      return $this->dbc;
     }
+        
+  
 
 }
 // trait display{
-//     public function retrieve($abc,$table){
-//       $query = "SELECT * FROM issue where category='$table' limit 1";
+//     public function retrieve($abc,$category){
+//       $query = "SELECT * FROM issue where category='$category' limit 1";
 //       $check = mysqli_query($abc,$query );
 //       return $check;
 //     }
@@ -29,34 +38,8 @@ class Connect {
   
 // }
 
-class show {
-    // use display;
-    public function retrieve($abc,$table){
-        $query = "SELECT * FROM problem where category='$table' limit 2";
-        $check = mysqli_query($abc,$query );
-        return $check;
-      }
+//$obj = new Connect();
 
-      public function all_issues($abc,$table){
-        $query = "SELECT * FROM problem where category='$table'";
-        $check = mysqli_query($abc,$query );
-        return $check;
-      }
 
-      public function info($abc,$id){
-        $query = "SELECT * FROM problem where issue_id='$id'";
-        $check = mysqli_query($abc,$query);
-        return $check;
-    }
-}
-
-$obj = new Connect();
-$conn = $obj->getconnection();
-$show = new show();
-$check = $show->retrieve($conn,'ELECTRICITY');
-$result = $show->retrieve($conn,'WATER');
-$result_parking= $show->retrieve($conn,'PARKING');
-$result_security= $show->retrieve($conn,'SECURITY');
-$result_clean= $show->retrieve($conn,'CLEANLINESS');
 
 ?>

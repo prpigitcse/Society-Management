@@ -1,11 +1,12 @@
 <?php
-include("database.php");
+
+include('issue_track.php');
 $category = null;
 if ( !empty($_GET['category'])) {
     $category = $_GET['category'];
 }
 
-$all=$show->all_issues($conn,$category);
+$all=$show->all_issues($category);
 
 ?>
 
@@ -24,9 +25,13 @@ $all=$show->all_issues($conn,$category);
 
     <script src="main.js"></script>
 </head>
-<body style="background-color:skyblue;">
+<body style="background-image: url('images/background.jpeg');
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;">
 <div class="wrapper fadeInDown">
-  <div id="formContent">
+  <div id="formContent"style="padding-bottom:20px;">
     <!-- Tabs Titles -->
     <h2 class="inactive underlineHover"> <a href="issue_tracking.php"> check your issue </a></h2>
 
@@ -59,8 +64,11 @@ $all=$show->all_issues($conn,$category);
       
     </tbody>
   </table>
+  <div><a href="admin_dashboard.php"><button class="btn btn-primary">Back to Dashboard</button></a>
+
 </div>
   </div>
+  
 </div>
 </body>
 </html>

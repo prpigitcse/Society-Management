@@ -1,11 +1,12 @@
 <?php
-include("database.php");
+
+include('issue_track.php');
 $id = null;
 if ( !empty($_GET['id'])) {
     $id = $_GET['id'];
 }
 
-$info = $show->info($conn,$id);
+$info = $show->info($id);
 $issue_details= $info->fetch_assoc();
 
 
@@ -26,7 +27,11 @@ $issue_details= $info->fetch_assoc();
 
     <script src="main.js"></script>
 </head>
-<body style="background-color:skyblue;">
+<body style="background-image: url('images/background.jpeg');
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;">
 <div class="wrapper fadeInDown">
   <div id="formContent" style="padding-left:50px;padding-right:50px;text-align:left;"><br>
   <pre>
@@ -37,16 +42,10 @@ $issue_details= $info->fetch_assoc();
   <h4>Issue end date     :     <?php echo $issue_details['end_date'];?></h4>
   <h4>Labour name        :     <?php echo $issue_details['labour_name'];?></h4>
 </pre>
-
-
-
-
+<div><a href="admin_dashboard.php"><button class="btn btn-primary">Back to home page</button></a>
+</div>
     <!-- Tabs Titles -->
 
-
-   
-  
- 
     <div id="formFooter">
  <b> specbee consulting services </b>
     </div>
