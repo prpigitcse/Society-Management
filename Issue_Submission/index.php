@@ -1,13 +1,13 @@
 
 
 <?php
-include("labour_db.php");
+include("issue_submission.php");
 if(isset($_POST['labour_login'])){
-    echo "bbxbj";
+ 
     $name=$_POST['labour'];
     $password=$_POST['password'];
     echo $name,$password;
-   $labour->login($name,$password);
+   $db->login($name,$password);
 
 }
 ?>

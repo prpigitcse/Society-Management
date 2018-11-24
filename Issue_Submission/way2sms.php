@@ -1,18 +1,18 @@
 <?php
-include("database_mithun.php");
+include("issue_submission.php");
 session_start();
 $mobile=$_POST['contactno'];
 $message=$_POST['issue'];
 $otp=$_POST['otp'];
 $category=$_POST['position'];
-$t=time();
-$start_date=date("Y-m-d",$t);
-$user_name=$_SESSION['name'];
+$time=time();
+$start_date=date("Y-m-d",$time);
+// $user_name=$_SESSION['name'];
 
 $subject=$_POST['subject'];
 $form=array(
     'category'=>$category,
-    'user_name'=>$user_name,
+    // 'user_name'=>$user_name,
     'subject'=>$subject,
     'otp'=>$otp,
     'issue'=>$message,

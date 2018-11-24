@@ -57,18 +57,18 @@
 </body>
 </html>
 <?php
-include("labour_db.php");
+include("issue_submission.php");
 if(isset($_POST['issue_submit'])){
 $status='close';
 $end_date=$_POST['edate'];
 $otp=$_POST['otp'];
-$labour->update_labour($status,$end_date,$otp);
+$db->update_labour($status,$end_date,$otp);
 
 
 
 
 $name=$_POST['labour'];
-$labour_contact = $labour->labour($name);
+$labour_contact = $db->labour_info($name);
 $labour_info = $labour_contact->fetch_assoc();
 $labour_number=$labour_info['labour_number'];
 $mobile=  $labour_number;
