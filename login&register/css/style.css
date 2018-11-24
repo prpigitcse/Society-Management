@@ -1,14 +1,49 @@
 th{
     text-align: center;
 }
-html {
-  background-image: url('../images/background.jpeg');
-  background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
+.tab-divider{
+  margin-top: 125px;
 }
-/* #card-shadow{
-  box-shadow:0px 0px 5px 4px;
-  padding:  10px;
-} */
+.tab-divider a:hover{
+  text-decoration: none;
+}
+.tab-first{
+  float: left;
+  height: 300px;
+  width: 33.33%;
+  background-color: #feb41d;
+}
+.tab-second{
+  float: left;
+  height: 300px;
+  width: 33.33%;
+  background-color: #5e7c87;
+}
+.tab-third{
+  float: left;
+  height: 300px;
+  width: 33.33%;
+  background-color: #4c5f6d;
+}
+.button1 {
+  color: rgba(255,255,255,1);
+  transition: all 0.5s;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.5);
+}
+.tab-divider .button1:hover {
+	background-color: rgba(255,255,255,0.2);
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;	
+}
+.sim-button {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 125px;
+  width: 60%;
+  cursor: pointer;
+}
